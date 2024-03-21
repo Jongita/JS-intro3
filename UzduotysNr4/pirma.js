@@ -28,7 +28,7 @@ studentai.forEach((studentas) => {
 });
 console.log(`Studentu kiekis: ${studentai.length}`);
 console.log(`Studentų amžiaus vidurkis: ${averageAge}`)
-console.log(`Studentų pažangumo vidurkis: ${marksAvg / totalMarks.length}`)
+console.log(`Studentų pažangumo vidurkis: ${(marksAvg / totalMarks.length).toFixed(1)}`)
 
 console.log('------------------------');
 for (const stud of studentai) {
@@ -36,5 +36,5 @@ for (const stud of studentai) {
     for (const marks of stud.pazymiai) {
         studMarksAvg += marks;
     }
-    console.log(`${stud.vardas} ${stud.pavarde} ${studMarksAvg / stud.pazymiai.length}`);
+    console.log(`${stud.vardas} ${stud.pavarde} ${(studMarksAvg / stud.pazymiai.length).toFixed(1)}`);
 }
