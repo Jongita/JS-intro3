@@ -1,17 +1,10 @@
 // 1. Užduotis
-
 // Faile studentai.json pateikiamas JSON formatu studentų sąrašas(masyvas), jų duomenys ir pažymiai.Nuskaitykite duomenis iš masyvo, suskaičiuokite ir išveskite:
-
 // 1. Studentų kiekį
-
 // 2. Studentų amžiaus vidurkį
-
 // 3. Studentų pažangumo vidurkį(visų pažymių vidurkį)
-
 // 4. Išveskite studentų sąrašą ir kiekvieno studento vidurkį, pvz.:
-
 // Jonas Jonaitis 5.5
-
 // Petras Petraitis 9.3
 
 const fs = require("fs");

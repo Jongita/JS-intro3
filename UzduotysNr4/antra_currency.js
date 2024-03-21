@@ -14,4 +14,5 @@ async function loadCurrency(cur, amount) {
     console.log(`${amount} Eur => ${kursas[cur] * amount} ${cur}`);
 };
 
-loadCurrency('NOK', 150);
+loadCurrency(process.argv[2], process.argv[3]);
+// loadCurrency('NOK', 150);
