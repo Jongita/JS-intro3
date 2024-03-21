@@ -17,8 +17,8 @@ async function loadCurrency(cur, amount) {
     if (!currAllRates[cur]) {
         console.log(`Valiuta ${cur} neegzistuoja. Galite rinktis vieną iš šių valiutų: ${Object.keys(currAllRates)}`);
     } else {
-        console.log(`${cur} kursas: ${currAllRates[cur]}`);
-        console.log(`${amount} Eur => ${currAllRates[cur] * amount} ${cur}`);
+        console.log(`${cur} kursas: ${(currAllRates[cur]).toFixed(1)}`);
+        console.log(`${amount} Eur => ${(currAllRates[cur] * amount).toFixed(0)} ${cur}`);
     }
 };
 

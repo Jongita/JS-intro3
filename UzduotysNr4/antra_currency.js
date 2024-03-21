@@ -10,8 +10,8 @@ async function loadCurrency(cur, amount) {
     const data = await fetch("https://api.frankfurter.app/latest?from=Eur&to=" + cur + "");
     const curr = await data.json();
     const kursas = curr.rates;
-    console.log(`${cur} kursas: ${kursas[cur]}`);
-    console.log(`${amount} Eur => ${kursas[cur] * amount} ${cur}`);
+    console.log(`${cur} kursas: ${(kursas[cur]).toFixed(1)}`);
+    console.log(`${amount} Eur => ${(kursas[cur] * amount).toFixed(0)} ${cur}`);
 };
 
 loadCurrency(process.argv[2], process.argv[3]);
