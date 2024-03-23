@@ -50,3 +50,20 @@ for (let i = 0; i < 3; i++) {
 // 5 3 9
 
 //kai staciakampis: isitraukti
+// Kai masyvas yra bet kokio dydžio [n,n]
+const n = mas2d.length;
+for (let i = 0; i < n; i++) {
+    let s = "";
+    for (let y = 0; y < n; y++) {
+        s += `${mas2d[i][y]} `;
+    }
+    console.log(s);
+}
+console.log("---------------");
+for (let i = 0; i < n; i++) {
+    let s = "";
+    for (let y = 0; y < n; y++) {
+        s += `${mas2d[y][i]} `;
+    }
+    console.log(s);
+}
