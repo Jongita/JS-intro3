@@ -36,30 +36,30 @@ class Trupmena {
     // 5. Sukurkime metodą: pridetiInt(sveikasisSkaicius) kuris pridėtų sveikąjį skaičių prie trupmenos, ištestuokime pakoreguotą kodą.
 
     pridetiInt(sSk) {
-        this.#s += sSk;
-        return `${this.#s} ${this.#skait} / ${this.#dal}`;
+        this.s += sSk;
+        return `${this.s} ${this.skait} / ${this.dal}`;
     }
     // 6. Sukurkite dar vieną papildomą metodą: prideti(sveikasisSkaicius, skaitiklis, vardiklis).Nepamirškite jog pridedant skaičių reikia subendravardiklinti).
     papildomaTrupmena(s2, skait2, dal2) {
-        this.#s += s2;
-        if (dal2 === this.#dal) {
-            return `${this.#s} ${this.#skait + skait2} / ${this.#dal}`;
+        this.s += s2;
+        if (dal2 === this.dal) {
+            return `${this.s} ${this.skait + skait2} / ${this.dal}`;
         } else {
-            return `${this.#s} ${(this.#skait * dal2) + (skait2 * this.#dal)} / ${this.#dal * dal2}`;
+            return `${this.s} ${(this.skait * dal2) + (skait2 * this.dal)} / ${this.dal * dal2}`;
         }
     }
 
     // 7. Sukurkime metodą pridetiTrupmena(x), šis metodas turės prie esamos trupmenos pridėti paduotą trupmeną.Nepamirškite jog taip pat po šio veiksmo reikės suprastinti trupmeną.
     pridetiTrupmena(x) {
-        if (x.dal === this.#dal) {
-            return `${this.#s + x.s} ${this.#skait + x.skait} / ${this.#dal}`;
+        if (x.dal === this.dal) {
+            return `${this.s + x.s} ${this.skait + x.skait} / ${this.dal}`;
         } else {
-            return `${this.#s + x.s} ${(this.#skait * x.dal) + (x.skait * this.#dal)} / ${this.#dal * x.dal}`;
+            return `${this.s + x.s} ${(this.skait * x.dal) + (x.skait * this.dal)} / ${this.dal * x.dal}`;
         }
     }
     // 8. Sukurkime metodą toDouble() kuris grąžintų esamą trupmenos reikšmę realiuoju skaičiumi(per kablelį).
     toDouble() {
-        return `${this.#s + eval(this.#skait / this.#dal)}`;
+        return `${this.s + eval(this.skait / this.dal)}`;
     }
 
 }
