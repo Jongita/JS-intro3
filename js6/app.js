@@ -5,9 +5,14 @@ const rez = document.getElementById("rez");
 
 const skaiciuoti = () => {
     const x = xInput.valueAsNumber;
+
     const y = yInput.valueAsNumber;
-    const sum = x + y;
-    rez.innerHTML = `Skaiciu suma yra lygi: ${sum}`;
+    if (isNaN(x) || isNaN(y)) {
+        rez.innerHTML = `Ivesti skaiciai yra neteisingi`;
+    } else {
+        const sum = x + y;
+        rez.innerHTML = `Skaiciu suma yra lygi: ${sum}`;
+    }
 }
 
 btn.onclick = skaiciuoti;
