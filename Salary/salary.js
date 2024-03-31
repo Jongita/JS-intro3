@@ -5,7 +5,8 @@ const addBtn = document.getElementById("add");
 const salaryList = document.getElementById("list"); // ul elementas
 const clearBtn = document.getElementById("clear");
 
-const sumTotal = document.getElementById("sum")
+const sumTotal = document.getElementById("sum")  // input elementas
+const avgTotal = document.getElementById("average")  // input elementas
 
 
 let list = [];
@@ -35,11 +36,17 @@ const loadSalary = () => {
 const showSalary = () => {
     // sumTotal.innerHTML = "";
     let sum = 0;
+    let average = 0;
     salaryTotal.forEach((s, i) => {
         sum += s;
+        average += s;
     })
-    sumTotal.value = sum;
+    sumTotal.value = `${sum} €`;
+    const avrg = average / salaryTotal.length;
+    avgTotal.value = `${isNaN(avrg) ? 0 : avrg} €`
 }
+
+
 
 const showList = () => {
     salaryList.innerHTML = "";
@@ -84,7 +91,6 @@ const addSalary = () => {
     showList();
     saveList();
 }
-
 
 const clear = () => {
     list = [];
