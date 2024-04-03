@@ -53,6 +53,7 @@ skaiciuoti = () => {
         const price = kainaInp.value - ((kainaInp.value * procInp.value) / 100);
         rezultatasDiv.innerHTML = `Galutinė produkto kaina: ${price} Eur`;
     }
+    console.log(typeof kainaInp.value);
     kainaInp.value = '';
     procInp.value = '';
     skaiciuotiBtn.disabled = true;
@@ -98,19 +99,7 @@ ijungtiMygtuka2 = () => {
 }
 
 skaiciuotiBtn.onclick = skaiciuoti;
-// Kai kažkoks elementas paspaudžiamas
-//kainaInp.onclick=ijungtiMygtuka;
 
-//kainaInp.onblur=ijungtiMygtuka;
-/*
-kainaInp.onfocus=()=>{
-    console.log("focus");
-}
-*/
 kainaInp.oninput = ijungtiMygtuka;
 procInp.oninput = ijungtiMygtuka2;
 
-//onclick -paspausta
-//ononfocuse, onblur - aktyvuojamas deaktivuojamas
-//onkeypress, onkeyup, onkeydown - mygtuku paspaudimai
-//onchange (įvyksta kai elementa nužymimas ir pakeičiama reikšmė), oninput (kai pasikeičia reikšmė) - reiksmes pasikeitimas
