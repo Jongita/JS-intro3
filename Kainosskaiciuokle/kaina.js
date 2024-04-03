@@ -74,7 +74,7 @@ ijungtiMygtuka = () => {
     }
 }
 
-procInp.oninput = () => {
+ijungtiMygtuka2 = () => {
     if (procInp.value == '' || isNaN(procInp.value)) {
         skaiciuotiBtn.disabled = true;
         message.innerHTML = "Įveskite skaičių nuo 0 iki 100"
@@ -103,6 +103,7 @@ kainaInp.onfocus=()=>{
 }
 */
 kainaInp.oninput = ijungtiMygtuka;
+procInp.oninput = ijungtiMygtuka2;
 
 //onclick -paspausta
 //ononfocuse, onblur - aktyvuojamas deaktivuojamas
