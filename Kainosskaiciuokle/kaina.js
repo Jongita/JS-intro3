@@ -85,6 +85,11 @@ ijungtiMygtuka2 = () => {
         message.innerHTML = "Įveskite skaičių nuo 0 iki 100"
         message.style.visibility = "visible";
         procInp.className = "form-control is-invalid";
+    } else if (kainaInp.value == '') {
+        skaiciuotiBtn.disabled = true;
+        error.innerHTML = "Įveskite skaičių"
+        error.style.visibility = "visible";
+        kainaInp.className = "form-control is-invalid";
     } else {
         skaiciuotiBtn.disabled = false;
         message.style.visibility = "hidden";
