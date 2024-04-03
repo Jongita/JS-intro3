@@ -34,7 +34,6 @@ const loadSalary = () => {
 }
 
 const showSalary = () => {
-    // sumTotal.innerHTML = "";
     let sum = 0;
     let average = 0;
     salaryTotal.forEach((s, i) => {
