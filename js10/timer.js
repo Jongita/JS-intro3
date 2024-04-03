@@ -12,7 +12,7 @@ let timerId;
 let kasSekunde = () => {
     [min, sec] = timer.value.split(":");
     total = Number(min) * 60 + Number(sec);
-    total--;
+    total++;
     min = Math.floor(total / 60);
     sec = total % 60;
     timer.value = `${min}:${String(sec).padStart(2, '0')}`;
@@ -32,5 +32,8 @@ let stopTimer = () => {
 }
 
 
-start.onclick = startTimer;
-stop.onclick = stopTimer;
+// start.onclick = startTimer;
+// stop.onclick = stopTimer;
+
+start.addEventListener("click", startTimer);
+stop.addEventListener("click", stopTimer);
