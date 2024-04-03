@@ -63,7 +63,7 @@ skaiciuoti = () => {
 ijungtiMygtuka = () => {
     if (kainaInp.value == '' || isNaN(kainaInp.value)) {
         skaiciuotiBtn.disabled = true;
-        error.innerHTML = "Įveskite skaičių"
+        error.innerHTML = "Įveskite kaina"
         error.style.visibility = "visible";
         kainaInp.className = "form-control is-invalid";
     } else {
