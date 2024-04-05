@@ -72,6 +72,11 @@ ijungtiMygtuka = () => {
         //error.innerHTML=""
         error.style.visibility = "hidden";
         kainaInp.className = "form-control is-valid";
+        if (procInp.value == '') {
+            skaiciuotiBtn.disabled = true;
+        } else {
+            skaiciuotiBtn.disabled = false;
+        }
     }
 }
 
