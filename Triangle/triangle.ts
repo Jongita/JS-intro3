@@ -87,8 +87,7 @@ group.push(new Triangle(8, 8, 8));
 
 console.log(`${t.largerTriangle(group[1])}`)
 
-let totalArea:number;
-totalArea=0;
+let totalArea=0;
 group.forEach((t2)=>{
     totalArea += t2.getArea();
 })
